@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../src/assets/images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Quản lý lớp</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../src/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../src/css/style.css" rel="stylesheet">
+    <!-- You can change the theme colors from here -->
+    <link href="../src/css/colors/blue.css" id="theme" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+
+<body class="fix-header fix-sidebar card-no-border">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <svg class="circular" viewBox="25 25 50 50">
+            <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+        </svg>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+
+                            <!-- Light Logo icon -->
+                            <img src="../src/assets/images/favicon.png" alt="homepage" class="light-logo" />
+                        </b>
+                        <!--End Logo icon -->
+                        <!-- Logo text --><span>
+
+                            <!-- Light Logo text -->
+                            <img src="../src/assets/images/lachonguniversity.png" class="light-logo"
+                                alt="homepage" /></span> </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto mt-md-0">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a
+                                class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item hidden-sm-down search-box"> <a
+                                class="nav-link hidden-sm-down text-muted waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a
+                                    class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Profile -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href=""
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Administrator <img
+                                    src="../src/assets/images/users/4.png" alt="user" class="profile-pic m-r-10" /></a>
+                            <div class="dropdown-menu" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#"><i class="fas fa-file"></i> File logging</a>
+                                <a class="dropdown-item" href="./doimatkhau.html"><i class="fas fa-pen"></i> Đổi mật
+                                    khẩu</a>
+                                <a class="dropdown-item" href="#"><i class="fas fa-edit"></i> Quản lý tài khoản</a>
+                                <a class="dropdown-item" href="./setting.html"><i class="fas fa-cog"></i> Cài đặt</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="../../login/login.html"><i
+                                        class="fa-solid fa-right-from-bracket"></i>Đăng xuất</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="./index.html" aria-expanded="false"><i
+                                    class="mdi mdi-home"></i><span class="hide-menu">Dashboard</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="./thongtinnguoidung.html" aria-expanded="false"><i
+                                    class="mdi mdi-account-key"></i><span class="hide-menu">Thông tin người
+                                    dùng</span></a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="waves-effect waves-dark" href="#" aria-expanded="false"><i
+                                    class="mdi mdi-playlist-check"></i><span class="hide-menu">Quản lý danh
+                                    sách</span></a>
+                            <ul class="submenu">
+                                <li><a href="./danhsach/dskhoa.html">Danh sách khoa</a></li>
+                                <li><a href="./danhsach/dsgiangvien.html">Danh sách giảng viên</a></li>
+                                <li><a href="./danhsach/dssinhvien.html">Danh sách sinh viên</a></li>
+                                <li><a href="./danhsach/dsphonghoc.html">Danh sách phòng học</a></li>
+                                <li><a href="./danhsach/dslophoc.html">Danh sách lớp học</a></li>
+                                <li><a href="./danhsach/dsmonhoc.html">Danh sách môn học</a></li>
+                                <li><a href="./danhsach/dstailieu.html">Danh sách tài liệu</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="waves-effect waves-dark" href="./quanlylophoc.html" aria-expanded="false"><i
+                                    class="mdi mdi-library"></i><span class="hide-menu">Quản lý lớp học</span></a>
+                            <!-- <ul class="submenu">
+                                <li><a href="quanlylophoc/lophoc.html">Lớp học</a></li>
+                                <li><a href="quanlylophoc/monhoc.html">Môn học</a></li>
+                            </ul> -->
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="./phanquyen.html" aria-expanded="false"><i
+                                    class="mdi mdi-settings"></i><span class="hide-menu">Phân quyền</span></a>
+                        </li>
+                        <!-- <li> <a class="waves-effect waves-dark" href="./pages-error-404.html" aria-expanded="false"><i
+                                    class="mdi mdi-help-circle"></i><span class="hide-menu">Error 404</span></a>
+                        </li> -->
+                    </ul>
+                </nav>
+            </div>
+            <!-- End Sidebar scroll-->
+            <!-- Bottom points-->
+            <div class="sidebar-footer">
+                <!-- item--><a href="./setting.html" class="link" data-toggle="tooltip" title="Settings"><i
+                        class="ti-settings"></i></a>
+                <!-- item--><a href="https://mail.google.com/mail/u/0/#inbox" class="link" data-toggle="tooltip"
+                    title="Mở Gmail của bạn"><i class="mdi mdi-gmail"></i></a>
+                <!-- item--><a href="../../login/login.html" class="link" data-toggle="tooltip" title="Logout"><i
+                        class="mdi mdi-power"></i></a>
+            </div>
+        </aside>
+    <!-- ============================================================== -->
+    <!-- End Left Sidebar - style you can find in sidebar.scss  -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- Page wrapper  -->
+    <!-- ============================================================== -->
+    <div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <div class="row page-titles">
+                <div class="col-md-5 col-8 align-self-center">
+                    <h3 class="text-themecolor m-b-0 m-t-0">Quản lý lớp </h3>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
+                        <li class="breadcrumb-item active">Quản lý lớp</li>
+                    </ol>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End Bread crumb and right sidebar toggle -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <div class="row">
+                <!-- column -->
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <h4 class="card-title">Các lớp <td>
+                                    <button title="Xóa lớp học" class="deletes">Delete</button>
+                                    <button title="Thêm lớp mới" class="adds">Add</button>
+                                    <button title="Chỉnh sửa lớp học" class="edits">Edit</button>
+                                </td>
+                            </h4>
+                            <h6 class="card-subtitle">Tất cả các lớp học hiển thị dưới đây</h6>
+                            <div class="card-quanlylophoc">
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a>🟢 Đang dạy</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="./giamsathocsinh.html" title="Click để vào lớp"><span>Vào
+                                                lớp</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a> 🟡 Sắp kết thúc</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="#" title="Click để vào lớp"><span>Vào lớp</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a> 🔴 Đã kết thúc</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="#" title="Click để vào lớp"><span>Vào lớp</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a> 🟢 Đang dạy</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="#" title="Click để vào lớp"><span>Vào lớp</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a> 🟢 Đang dạy</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="#" title="Click để vào lớp"><span>Vào lớp</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a> 🟢 Đang dạy</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="#" title="Click để vào lớp"><span>Vào lớp</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a> 🟢 Đang dạy</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="#" title="Click để vào lớp"><span>Vào lớp</span></a>
+                                    </div>
+                                </div>
+
+                                <div class="basic-card basic-card-aqua">
+                                    <div class="card-content">
+                                        <span class="card-title">Cơ sở dữ liệu</span>
+                                        <p><a></a></p> <!--Đoạn này để cách dòng  -->
+                                        <p>Môn học : <a>Cơ sở dữ liệu</a></p>
+                                        <p>Giảng viên : <a>Nguyễn Minh Phúc</a></p>
+                                        <p>Lớp : <a>20CT114</a></p>
+                                        <p>Trạng thái : <a> 🟢 Đang dạy</a></p>
+                                    </div>
+                                    <div class="card-link">
+                                        <a href="#" title="Click để vào lớp"><span>Vào lớp</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Lời khuyên chân thành đừng xổ nó ra =)))) -->
+                        <style>
+                            /* Basic Card */
+
+                            .card-quanlylophoc {
+                                display: flex;
+                                flex-wrap: wrap;
+                            }
+
+                            .basic-card {
+                                border-radius: 2%;
+                                width: 300px;
+                                position: relative;
+                                -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+                                -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+                                -o-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+                                box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
+                                transition: transform 0.2s ease-out;
+                            }
+
+                            .basic-card.active {
+                                transform: scale(1.1);
+                            }
+
+                            .basic-card .card-content {
+                                padding: 30px;
+                            }
+
+                            .basic-card .card-title {
+                                font-size: 25px;
+                                font-family: 'Open Sans', sans-serif;
+                            }
+
+                            .basic-card .card-text {
+                                line-height: 1.6;
+                            }
+
+                            .basic-card .card-link {
+                                padding: 25px;
+                                width: -webkit-fill-available;
+                            }
+
+                            .basic-card .card-link a {
+                                text-decoration: none;
+                                position: relative;
+                                padding: 10px 0px;
+                            }
+
+                            .basic-card .card-link a:after {
+                                top: 30px;
+                                content: "";
+                                display: block;
+                                height: 2px;
+                                left: 50%;
+                                position: absolute;
+                                width: 0;
+                                -webkit-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                                -moz-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                                -o-transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                                transition: width 0.3s ease 0s, left 0.3s ease 0s;
+                            }
+
+                            .basic-card .card-link a:hover:after {
+                                width: 100%;
+                                left: 0;
+                            }
+
+
+                            .basic-card-aqua {
+                                cursor: pointer;
+                                background-image: linear-gradient(to bottom right, #9ab1af, #98a4de);
+                            }
+
+                            .basic-card-aqua .card-content,
+                            .basic-card .card-link a {
+                                color: #fff;
+                            }
+
+                            .basic-card-aqua .card-link {
+                                border-top: 1px solid #82c1bb;
+                            }
+
+                            .basic-card-aqua .card-link a:after {
+                                background: #fff;
+                            }
+
+                            .basic-card-aqua.active {
+                                background-image: linear-gradient(to bottom right, #284F9E, #284F9E);
+                                /* font-weight: bold; */
+                                cursor: pointer;
+                                transform: scale(1.1);
+                            }
+                        </style>
+                        <!-- tới đây là hết css của page này rồi  -->
+                        <script>
+                            // Lấy danh sách các thẻ card
+                            const cards = document.querySelectorAll('.basic-card');
+
+                            // Đăng ký sự kiện click cho từng thẻ card
+                            cards.forEach(card => {
+                                card.addEventListener('click', () => {
+                                    // Kiểm tra xem thẻ card đã có lớp active hay chưa
+                                    const isActive = card.classList.contains('active');
+
+                                    // Xóa lớp active khỏi tất cả các thẻ card
+                                    cards.forEach(item => item.classList.remove('active'));
+
+                                    // Thêm lớp active vào thẻ card được click nếu nó chưa có lớp active
+                                    if (!isActive) {
+                                        card.classList.add('active');
+                                    }
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <footer class="footer">
+            © 2023 smarthing design by sam - s0uxz
+        </footer>
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../src/assets/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../src/assets/plugins/bootstrap/js/tether.min.js"></script>
+    <script src="../src/assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../src/js/jquery.slimscroll.js"></script>
+    <!--Wave Effects -->
+    <script src="../src/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../src/js/sidebarmenu.js"></script>
+    <!--stickey kit -->
+    <script src="../src/assets/plugins/sticky-kit-master/dist/sticky-kit.min.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../src/js/custom.min.js"></script>
+</body>
+
+</html>

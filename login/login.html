@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel='stylesheet' href="./login.css">
+	<link rel="icon" href="./favicon.png" type="image/x-icon" />
+
+<body>
+	<div class="container" id="container">
+		<div class="form-container sign-in-container">
+			<form action="../dashboard/admin/index.html">
+				<img src="./img/logocochu.png" alt="LacHongUniversity">
+				<div class="overlay-container">
+					<div class="overlay">
+						<div class="overlay-panel overlay-right">
+							<h1>Đăng nhập</h1>
+							<input type="email" placeholder="Email" />
+							<input type="password" placeholder="Mật khẩu" />
+							<div class="forgot-password">
+								<a class="quenmk" href="./forgot.html">Quên mật khẩu?</a>
+							</div>
+							<button class="btn-login">Đăng nhập</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+	<!-- -------------------------------------------------------------------	 -->
+	<!-- partial -->
+	<script>
+		const container = document.getElementById("container");
+		const forgotPasswordLink = document.querySelector(".forgot-password a");
+		const signInForm = document.querySelector(".sign-in-container form");
+
+		forgotPasswordLink.addEventListener("click", function (event) {
+			event.preventDefault();
+			container.style.filter = "blur(4px)";
+			Swal.fire({
+				title: 'Quên ?',
+				text: 'Bạn đã quên mật khẩu à ?',
+				confirmButtonText: 'Yé =)))',
+				icon: 'question',
+				showCloseButton: false
+			}).then((result) => {
+				if (result.isConfirmed) {
+					window.location.href = "../login/forgot.html";
+				}
+				container.style.filter = "blur(0px)";
+			});
+		});
+
+		signInForm.addEventListener("submit", function (event) {
+			event.preventDefault();
+			const email = signInForm.querySelector('input[type="email"]').value;
+			const password = signInForm.querySelector('input[type="password"]').value;
+
+			container.style.filter = "blur(4px)";
+			// Hiển thị thông báo đăng nhập thành công
+			Swal.fire({
+				title: 'Thành công',
+				text: 'Xác nhận để đăng nhập vào trang chủ',
+				confirmButtonText: 'Xác nhận',
+				icon: 'success',
+				showCloseButton: false
+			}).then((result) => {
+				// Thực hiện xác thực email và mật khẩu ở đây
+				// Nếu xác thực thành công, chuyển hướng đến trang dashboard/admin/index.html
+				if (result.isConfirmed) {
+					window.location.href = "../dashboard/admin/index.html";
+				}
+				window.location.href = "../dashboard/admin/index.html";
+			});
+		});
+
+	</script>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+</html>
