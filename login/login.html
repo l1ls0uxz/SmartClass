@@ -6,7 +6,7 @@
 	<title>Login</title>
 	<link rel='stylesheet' href="./login.css">
 	<link rel="icon" href="./favicon.png" type="image/x-icon" />
-
+	<script src="index.js"></script>
 <body>
 	<div class="container" id="container">
 		<div class="form-container sign-in-container">
@@ -16,8 +16,8 @@
 					<div class="overlay">
 						<div class="overlay-panel overlay-right">
 							<h1>Đăng nhập</h1>
-							<input type="email" placeholder="Email" />
-							<input type="password" placeholder="Mật khẩu" />
+							<input type="email" id="email" placeholder="Email" required/>
+							<input type="password" id="password" placeholder="Mật khẩu" required/>
 							<div class="forgot-password">
 								<a class="quenmk" href="./forgot.html">Quên mật khẩu?</a>
 							</div>
@@ -67,7 +67,6 @@
 				showCloseButton: false
 			}).then((result) => {
 				// Thực hiện xác thực email và mật khẩu ở đây
-
 				// Nếu xác thực thành công, chuyển hướng đến trang dashboard/admin/index.html
 				if (result.isConfirmed) {
 					window.location.href = "../dashboard/admin/index.html";
@@ -80,8 +79,8 @@
 		
 
 	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-
 </html>
